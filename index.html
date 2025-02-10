@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معدن پیشرفته</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- برای نمودارها -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>معدن پیشرفته</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">درباره ما</a></li>
+                <li><a href="#services">خدمات</a></li>
+                <li><a href="#gallery">گالری</a></li>
+                <li><a href="#contact">تماس با ما</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- About Us -->
+    <section id="about">
+        <h2>درباره معدن پیشرفته</h2>
+        <p>معدن پیشرفته تحت مدیریت سید حمیدرضا حسینی، یکی از پیشرفته‌ترین معادن در این صنعت است که از فناوری‌های نوین استفاده می‌کند.</p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <h2>خدمات ما</h2>
+        <ul>
+            <li>اکتشافات معدنی</li>
+            <li>استخراج و فرآوری مواد معدنی</li>
+            <li>مدیریت پسماندها</li>
+            <li>آموزش و مشاوره</li>
+        </ul>
+    </section>
+
+    <!-- Statistics / Charts -->
+    <section id="statistics">
+        <h2>آمار و نمودارها</h2>
+        <canvas id="miningChart" width="400" height="200"></canvas>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+        <h2>گالری تصاویر</h2>
+        <div class="image-gallery">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact">
+        <h2>تماس با ما</h2>
+        <p>برای اطلاعات بیشتر و مشاوره با ما تماس بگیرید:</p>
+        <p>ایمیل: info@miningcompany.com</p>
+        <p>تلفن: +9821-0000-0000</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>مدیریت: سید حمیدرضا حسینی | تمام حقوق محفوظ است.</p>
+    </footer>
+
+    <script>
+        // Example of a Chart using Chart.js
+        var ctx = document.getElementById('miningChart').getContext('2d');
+        var miningChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['ماه 1', 'ماه 2', 'ماه 3', 'ماه 4', 'ماه 5'],
+                datasets: [{
+                    label: 'مقدار استخراج',
+                    data: [120, 150, 180, 200, 250],
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
